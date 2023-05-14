@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-chtq
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/test-images@sha256:96b275b5b2f9a79814ae57cb6c8bfc75c60c946a01d25ecae63a9837eab8d1e6
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
